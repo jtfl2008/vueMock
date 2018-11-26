@@ -9,7 +9,7 @@ axios.defaults.timeout = 5000
 axios.defaults.headers.post['Content-Type'] =
   'application/x-www-form-urlencoded;charset=UTF-8'
 // 配置接口地址
-// axios.defaults.baseURL = 'api'
+axios.defaults.baseURL = 'http://127.0.0.1:7001/'
 
 // POST传参序列化(添加请求拦截器)
 axios.interceptors.request.use(
@@ -48,8 +48,8 @@ export function get (url, params) {
         params: params
       })
       .then(
-        response => {
-          resolve(response.data)
+        res => {
+          resolve(res.data.data)
         },
         err => {
           reject(err)
@@ -65,8 +65,8 @@ export function post (url, params) {
     axios
       .post(url, params)
       .then(
-        response => {
-          resolve(response.data)
+        res => {
+          resolve(res.data.data)
         },
         err => {
           reject(err)
