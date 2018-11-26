@@ -1,6 +1,12 @@
 import { get, post } from './axiosConfig.js'
 export default {
-  getList (params) {
-    return get('/getList', params)
+  getArticles (params) {
+    return get('/articles', params)
+  },
+  getArticle (params) {
+    return get('/article', params)
+  },
+  createArticle (params) {
+    return post('/createArticle', params)
   }
 }
