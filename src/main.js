@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import api from '@/api'
-if (process.env.NODE_ENV !== 'production') require('./mock/')
+// if (process.env.NODE_ENV !== 'production') require('./mock/')
 Vue.prototype.$api = api
 Vue.config.productionTip = false
 
